@@ -15,7 +15,7 @@
 
 void main(void) {
     // Set RC2 as output using custom I/O macro.
-    SET_PIN_MODE(targeta, 2, OUTPUT);
+    SET_PIN_MODE(targetc,2, OUTPUT);
     
     // Initialize Timer0 for generating accurate delays.
     Timer0_Init();
@@ -23,12 +23,12 @@ void main(void) {
     // Infinite loop: Toggle LED state every 500ms.
     while (1) {
         // Turn on the LED: Set RC2 high.
-        PIN_HIGH(setporta, 2);
+        PIN_HIGH(setportc, 2);
         // Delay for 500 milliseconds.
         delay_ms(500);
         
         // Turn off the LED: Set RC2 low.
-        PIN_LOW(setporta, 2);
+        PIN_LOW(setportc, 2);
         // Delay for 500 milliseconds.
         delay_ms(500);
     }
