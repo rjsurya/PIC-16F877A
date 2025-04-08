@@ -34,8 +34,9 @@ This project blinks an LED connected to the RC2 pin of the PIC16F877A microcontr
 - **IDE:** MPLAB X IDE (recommended) or any compatible development environment
 
 ## Project Structure
-
-<br> delay.c // Implementation of delay functions using Timer0</br>
-<br> delay.h // Header file declaring delay functions and Timer0 register definitions </br>
-<br> blink.c // Main application that toggles the LED on RC2 </br>
-<br> io.h // I/O definitions and macros for pin manipulation</br>
+<p>
+├──delay.c // Implementation of delay functions using Timer0
+├──delay.h // Header file declaring delay functions and Timer0 register definitions 
+├──blink.c // Main application that toggles the LED on RC2 
+├──io.h // I/O definitions and macros for pin manipulation
+</p>
