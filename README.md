@@ -33,6 +33,17 @@ This project blinks an LED connected to the RC2 pin of the PIC16F877A microcontr
 - **Compiler:** XC8 Compiler or equivalent
 - **IDE:** MPLAB X IDE (recommended) or any compatible development environment
 
+##**Delay Calculation**
+-**Example Calculation (100μs delay):**
+-**cycles** = 100 × 5 = 500
+
+-**reload_value** = 256 - (500/256) ≈ 256 - 1.95 ≈ 254 (0xFE)
+
+-**Timer counts**: 254 → 255 → overflow (2 counts)
+
+-**Actual delay:** 2 × 51.2μs = 102.4μs (close to requested 100μs)
+  
+
 ## Project Structure
 
 <br> delay.c // Implementation of delay functions using Timer0 
