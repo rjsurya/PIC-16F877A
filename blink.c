@@ -10,8 +10,8 @@
  */
 
 #include <xc.h>
-#include "io.h"
-#include "delay.h"
+#include <io.h>
+#include <delay.h>
 
 void main(void) {
     // Set RC2 as output using custom I/O macro.
