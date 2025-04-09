@@ -34,4 +34,14 @@ This implementation provides:
 - Minimal circuitry (reset, power)
 - Optional LED for demonstration
 
-## Software Architecture
+## Timer Calculation
+cycles = (desired_time) × (clock_frequency / 4)
+Where:
+- desired_time in microseconds (μs)
+- _XTAL_FREQ in Hz (e.g., 20MHz = 20000000UL)
+- Division by 4 converts Fosc to instruction cycle
+
+reload_value = 256 - (total_cycles / timer_steps)
+Where:
+- 256 = 8-bit timer maximum count (0-255)
+- timer_steps = 256 (for 1:256 prescaler)
